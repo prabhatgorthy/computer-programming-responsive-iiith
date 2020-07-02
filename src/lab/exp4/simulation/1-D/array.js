@@ -69,6 +69,8 @@ window.view = {
 		else
 			alert( 'Size of the array must be an Integer !' )
 	},
+	
+	
 	generateRandomNumbers: function() {
 		var inputValue = this.getArraySize()
 		for ( i = 0 ; i < inputValue ; i++ ) {
@@ -83,11 +85,27 @@ window.view = {
 	},
 	takeInputFromRadioBox: function() {
 		var element = document.getElementsByName('radio_group')
-		if ( element[0].checked )
+		
+		
+	
+
+		
+		if ( element[0].checked){
+
+       
+		 
+            
+			
 			this.generateRandomNumbers()
+
+		}
 		else if (element[1].checked)
-			this.getUserInput()
+		
+		this.getUserInput()
+
+			
 	},
+	
 	createBoxes: function() {
 		for ( i = 0 ; i < this.numbers.length ; i++ ) {
 			var outerDiv = document.createElement('div')
@@ -150,6 +168,8 @@ window.view = {
 	},
 	displayElements: function() {
 		this.takeInputFromRadioBox()
+	
+
 		var arraySize = this.getArraySize()
 		var isValidInput = this.validateUserInputs()
 		if ( arraySize === this.numbers.length ) {	
